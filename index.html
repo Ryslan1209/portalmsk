@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ООО «Портал» — зеркала премиум-качества</title>
+  <style>
+    :root {
+      --bg: #0f1114;
+      --card: #171b20;
+      --accent: #d2a256;
+      --text: #e8ecf1;
+      --muted: #9ba4af;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Inter", system-ui, -apple-system, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    header {
+      padding: 32px clamp(20px, 5vw, 64px);
+      background: linear-gradient(135deg, rgba(210,162,86,0.2), rgba(15,17,20,0.9));
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+    }
+    .logo {
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      color: var(--accent);
+      margin-bottom: 24px;
+    }
+    .hero-title {
+      font-size: clamp(28px, 4vw, 44px);
+      margin: 0 0 16px;
+    }
+    .hero-subtitle {
+      color: var(--muted);
+      font-size: clamp(16px, 2vw, 20px);
+      max-width: 720px;
+    }
+    main { padding: 32px clamp(20px, 5vw, 64px) 80px; }
+    .grid {
+      display: grid;
+      gap: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      margin-top: 20px;
+    }
+    .card {
+      background: var(--card);
+      border: 1px solid rgba(255,255,255,0.05);
+      border-radius: 16px;
+      padding: 20px;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.25);
+    }
+    .card h3 { margin-top: 0; margin-bottom: 8px; }
+    .muted { color: var(--muted); }
+    .pill {
+      display: inline-block;
+      padding: 6px 12px;
+      border-radius: 999px;
+      background: rgba(210,162,86,0.15);
+      color: var(--accent);
+      font-weight: 600;
+      font-size: 13px;
+      letter-spacing: 0.01em;
+    }
+    .comparison {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 12px;
+    }
+    .comparison th, .comparison td {
+      padding: 12px;
+      text-align: left;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+    .comparison th { color: var(--muted); font-weight: 500; }
+    .cta {
+      margin-top: 32px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      align-items: center;
+    }
+    .button {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 14px 20px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, #d2a256, #c28b38);
+      color: #0f1114;
+      font-weight: 700;
+      border: none;
+      cursor: pointer;
+      text-decoration: none;
+      transition: transform 0.1s ease, box-shadow 0.1s ease;
+    }
+    .button:hover { transform: translateY(-1px); box-shadow: 0 12px 30px rgba(210,162,86,0.35); }
+    .note { font-size: 14px; color: var(--muted); }
+    footer {
+      border-top: 1px solid rgba(255,255,255,0.06);
+      padding: 24px clamp(20px, 5vw, 64px);
+      color: var(--muted);
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">ООО «Портал» • Зеркала среднего-премиум сегмента</div>
+    <h1 class="hero-title">Мы делаем зеркала, которые выглядят и служат как премиум</h1>
+    <p class="hero-subtitle">Наша ценность в точности геометрии, глубоком блеске и устойчивости покрытия. Если где-то дешевле — спросите, почему там сэкономили.</p>
+    <div class="cta">
+      <a class="button" href="tel:+79990000000">Позвонить и обсудить</a>
+      <span class="note">Ответим на вопросы за 5 минут, подскажем оптимальный вариант.</span>
+    </div>
+  </header>
+
+  <main>
+    <section>
+      <span class="pill">Почему у нас не как на маркетплейсе</span>
+      <div class="grid">
+        <div class="card">
+          <h3>Качество стекла</h3>
+          <p class="muted">Оптическое стекло толщиной 5–6 мм без волн и искажений. Маркетплейс чаще ставит 3–4 мм — отсюда «картинка плывёт» и дешёвый вид.</p>
+        </div>
+        <div class="card">
+          <h3>Серебряное амальгамное покрытие</h3>
+          <p class="muted">Мы используем трёхслойную защиту от коррозии и потемнения, гарантия блеска 5 лет. Удешевлённые зеркала покрывают алюминием — оно темнеет и даёт мутность.</p>
+        </div>
+        <div class="card">
+          <h3>Фурнитура и сборка</h3>
+          <p class="muted">Скрытые крепления, усиленные бортики, точная шлифовка. Каждое изделие проходит контроль геометрии и упаковку как для доставки искусства.</p>
+        </div>
+        <div class="card">
+          <h3>Ответственность бренда</h3>
+          <p class="muted">Вы общаетесь с производителем, а не с продавцом на маркетплейсе. Мы отвечаем за материал, монтаж, сервис и даём документированную гарантию.</p>
+        </div>
+      </div>
+    </section>
+
+    <section style="margin-top: 36px;">
+      <span class="pill">Сравнение с маркетплейсом</span>
+      <div class="card" style="margin-top:12px;">
+        <table class="comparison">
+          <thead>
+            <tr>
+              <th>Параметр</th>
+              <th>ООО «Портал»</th>
+              <th>Типичный маркетплейс</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Вид и глубина отражения</td>
+              <td>Премиум-глянец, без искажений, ровная подложка</td>
+              <td>Лёгкая волна, потускнение через 6–12 месяцев</td>
+            </tr>
+            <tr>
+              <td>Покрытие</td>
+              <td>Серебро + 3 слоя защиты, выдерживает влажные помещения</td>
+              <td>Алюминий, подвержен коррозии и царапинам</td>
+            </tr>
+            <tr>
+              <td>Гарантия</td>
+              <td>5 лет на покрытие и геометрию</td>
+              <td>Обычно 6–12 месяцев без контроля условий</td>
+            </tr>
+            <tr>
+              <td>Индивидуализация</td>
+              <td>Любой размер, подсветка, подогрев, безопасные края</td>
+              <td>Стандартные размеры, ограниченные опции</td>
+            </tr>
+            <tr>
+              <td>Сервис</td>
+              <td>Проектирование, доставка, монтаж, бережная упаковка</td>
+              <td>Доставка «как есть», установка за ваш счёт и риск</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section style="margin-top: 36px;">
+      <span class="pill">Возражение: «Дорого, на маркетплейсе дешевле»</span>
+      <div class="grid">
+        <div class="card">
+          <h3>Ответ</h3>
+          <p class="muted">Цена отражает не наценку, а материалы и ответственность. Мы не экономим на толщине стекла, серебре и защите — чтобы зеркало выглядело премиально весь срок службы.</p>
+        </div>
+        <div class="card">
+          <h3>Риск экономии</h3>
+          <p class="muted">Дешёвое зеркало может потемнеть или деформироваться, а замена и повторный монтаж обойдутся дороже изначальной разницы в цене.</p>
+        </div>
+        <div class="card">
+          <h3>Документированная гарантия</h3>
+          <p class="muted">Мы фиксируем условия эксплуатации и даём письменную гарантию 5 лет. При браке или повреждении в пути мы изготовим и доставим новое за свой счёт.</p>
+        </div>
+        <div class="card">
+          <h3>Проверка качества перед оплатой</h3>
+          <p class="muted">Можно увидеть образцы, получить фото/видео отчёт и акт контроля. Оплата — после утверждения качества, без сюрпризов.</p>
+        </div>
+      </div>
+    </section>
+
+    <section style="margin-top: 36px;">
+      <span class="pill">Как мы работаем</span>
+      <div class="grid">
+        <div class="card">
+          <h3>1. Консультация</h3>
+          <p class="muted">Собираем размеры, условия помещения и ваши пожелания. Предлагаем 2–3 конфигурации под бюджет.</p>
+        </div>
+        <div class="card">
+          <h3>2. Проект и смета</h3>
+          <p class="muted">Фиксируем спецификацию материалов, сроки и гарантию. Прозрачная смета без скрытых доплат.</p>
+        </div>
+        <div class="card">
+          <h3>3. Производство и контроль</h3>
+          <p class="muted">Каждое зеркало проходит проверку геометрии, покрытия и упаковки. Отчёт отправляем вам.</p>
+        </div>
+        <div class="card">
+          <h3>4. Доставка и монтаж</h3>
+          <p class="muted">Аккуратно доставляем, монтируем и закрепляем. Проверяем внешний вид при вас.</p>
+        </div>
+      </div>
+      <div class="cta">
+        <a class="button" href="mailto:sales@portal.ru">Получить предложение</a>
+        <span class="note">Сравним с маркетплейсом по честным параметрам — покажем, где именно экономия, а где риск.</span>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    ООО «Портал» • Зеркала среднего-премиум сегмента • Тел.: +7 999 000 00 00 • sales@portal.ru
+  </footer>
+</body>
+</html>
