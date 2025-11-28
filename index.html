@@ -3,238 +3,372 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ООО «Портал» — зеркала премиум-качества</title>
-  <style>
-    :root {
-      --bg: #0f1114;
-      --card: #171b20;
-      --accent: #d2a256;
-      --text: #e8ecf1;
-      --muted: #9ba4af;
-    }
-    * { box-sizing: border-box; }
-    body {
-      margin: 0;
-      font-family: "Inter", system-ui, -apple-system, sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.6;
-    }
-    header {
-      padding: 32px clamp(20px, 5vw, 64px);
-      background: linear-gradient(135deg, rgba(210,162,86,0.2), rgba(15,17,20,0.9));
-      border-bottom: 1px solid rgba(255,255,255,0.05);
-    }
-    .logo {
-      font-weight: 700;
-      letter-spacing: 0.04em;
-      color: var(--accent);
-      margin-bottom: 24px;
-    }
-    .hero-title {
-      font-size: clamp(28px, 4vw, 44px);
-      margin: 0 0 16px;
-    }
-    .hero-subtitle {
-      color: var(--muted);
-      font-size: clamp(16px, 2vw, 20px);
-      max-width: 720px;
-    }
-    main { padding: 32px clamp(20px, 5vw, 64px) 80px; }
-    .grid {
-      display: grid;
-      gap: 20px;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      margin-top: 20px;
-    }
-    .card {
-      background: var(--card);
-      border: 1px solid rgba(255,255,255,0.05);
-      border-radius: 16px;
-      padding: 20px;
-      box-shadow: 0 10px 40px rgba(0,0,0,0.25);
-    }
-    .card h3 { margin-top: 0; margin-bottom: 8px; }
-    .muted { color: var(--muted); }
-    .pill {
-      display: inline-block;
-      padding: 6px 12px;
-      border-radius: 999px;
-      background: rgba(210,162,86,0.15);
-      color: var(--accent);
-      font-weight: 600;
-      font-size: 13px;
-      letter-spacing: 0.01em;
-    }
-    .comparison {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 12px;
-    }
-    .comparison th, .comparison td {
-      padding: 12px;
-      text-align: left;
-      border-bottom: 1px solid rgba(255,255,255,0.06);
-    }
-    .comparison th { color: var(--muted); font-weight: 500; }
-    .cta {
-      margin-top: 32px;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      align-items: center;
-    }
-    .button {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 14px 20px;
-      border-radius: 12px;
-      background: linear-gradient(135deg, #d2a256, #c28b38);
-      color: #0f1114;
-      font-weight: 700;
-      border: none;
-      cursor: pointer;
-      text-decoration: none;
-      transition: transform 0.1s ease, box-shadow 0.1s ease;
-    }
-    .button:hover { transform: translateY(-1px); box-shadow: 0 12px 30px rgba(210,162,86,0.35); }
-    .note { font-size: 14px; color: var(--muted); }
-    footer {
-      border-top: 1px solid rgba(255,255,255,0.06);
-      padding: 24px clamp(20px, 5vw, 64px);
-      color: var(--muted);
-      font-size: 14px;
-    }
-  </style>
+  <title>ООО «Портал» | Премиальные зеркала для интерьера</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header>
-    <div class="logo">ООО «Портал» • Зеркала среднего-премиум сегмента</div>
-    <h1 class="hero-title">Мы делаем зеркала, которые выглядят и служат как премиум</h1>
-    <p class="hero-subtitle">Наша ценность в точности геометрии, глубоком блеске и устойчивости покрытия. Если где-то дешевле — спросите, почему там сэкономили.</p>
-    <div class="cta">
-      <a class="button" href="tel:+79990000000">Позвонить и обсудить</a>
-      <span class="note">Ответим на вопросы за 5 минут, подскажем оптимальный вариант.</span>
+  <header class="topbar">
+    <div class="container">
+      <div class="logo">ООО «Портал»</div>
+      <nav class="nav">
+        <a href="#collection">Коллекция</a>
+        <a href="#benefits">Преимущества</a>
+        <a href="#designer">Дизайн</a>
+        <a href="#process">Заказ</a>
+        <a class="button ghost" href="#contact">Связаться</a>
+      </nav>
     </div>
   </header>
 
   <main>
-    <section>
-      <span class="pill">Почему у нас не как на маркетплейсе</span>
-      <div class="grid">
-        <div class="card">
-          <h3>Качество стекла</h3>
-          <p class="muted">Оптическое стекло толщиной 5–6 мм без волн и искажений. Маркетплейс чаще ставит 3–4 мм — отсюда «картинка плывёт» и дешёвый вид.</p>
+    <section class="hero" id="top">
+      <div class="container grid">
+        <div class="hero__content">
+          <p class="eyebrow">Средний-премиум сегмент · Производство в Москве</p>
+          <h1>Премиальные зеркала на заказ от ООО «Портал»</h1>
+          <p class="lede">Мы делаем акцентные зеркала для квартир, салонов красоты и шоу-румов. Индивидуальные формы, подсветка, антизапотевание и встроенная акустика — без компромиссов по качеству.</p>
+          <div class="hero__actions">
+            <a class="button" href="#collection">Смотреть коллекцию</a>
+            <a class="button ghost" href="#process">Как заказать</a>
+          </div>
+          <div class="badges">
+            <span>Сделано в РФ</span>
+            <span>Гарантия 3 года</span>
+            <span>Бесплатный замер</span>
+            <span>Контроль качества на каждом этапе</span>
+          </div>
         </div>
-        <div class="card">
-          <h3>Серебряное амальгамное покрытие</h3>
-          <p class="muted">Мы используем трёхслойную защиту от коррозии и потемнения, гарантия блеска 5 лет. Удешевлённые зеркала покрывают алюминием — оно темнеет и даёт мутность.</p>
-        </div>
-        <div class="card">
-          <h3>Фурнитура и сборка</h3>
-          <p class="muted">Скрытые крепления, усиленные бортики, точная шлифовка. Каждое изделие проходит контроль геометрии и упаковку как для доставки искусства.</p>
-        </div>
-        <div class="card">
-          <h3>Ответственность бренда</h3>
-          <p class="muted">Вы общаетесь с производителем, а не с продавцом на маркетплейсе. Мы отвечаем за материал, монтаж, сервис и даём документированную гарантию.</p>
-        </div>
-      </div>
-    </section>
-
-    <section style="margin-top: 36px;">
-      <span class="pill">Сравнение с маркетплейсом</span>
-      <div class="card" style="margin-top:12px;">
-        <table class="comparison">
-          <thead>
-            <tr>
-              <th>Параметр</th>
-              <th>ООО «Портал»</th>
-              <th>Типичный маркетплейс</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Вид и глубина отражения</td>
-              <td>Премиум-глянец, без искажений, ровная подложка</td>
-              <td>Лёгкая волна, потускнение через 6–12 месяцев</td>
-            </tr>
-            <tr>
-              <td>Покрытие</td>
-              <td>Серебро + 3 слоя защиты, выдерживает влажные помещения</td>
-              <td>Алюминий, подвержен коррозии и царапинам</td>
-            </tr>
-            <tr>
-              <td>Гарантия</td>
-              <td>5 лет на покрытие и геометрию</td>
-              <td>Обычно 6–12 месяцев без контроля условий</td>
-            </tr>
-            <tr>
-              <td>Индивидуализация</td>
-              <td>Любой размер, подсветка, подогрев, безопасные края</td>
-              <td>Стандартные размеры, ограниченные опции</td>
-            </tr>
-            <tr>
-              <td>Сервис</td>
-              <td>Проектирование, доставка, монтаж, бережная упаковка</td>
-              <td>Доставка «как есть», установка за ваш счёт и риск</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </section>
-
-    <section style="margin-top: 36px;">
-      <span class="pill">Возражение: «Дорого, на маркетплейсе дешевле»</span>
-      <div class="grid">
-        <div class="card">
-          <h3>Ответ</h3>
-          <p class="muted">Цена отражает не наценку, а материалы и ответственность. Мы не экономим на толщине стекла, серебре и защите — чтобы зеркало выглядело премиально весь срок службы.</p>
-        </div>
-        <div class="card">
-          <h3>Риск экономии</h3>
-          <p class="muted">Дешёвое зеркало может потемнеть или деформироваться, а замена и повторный монтаж обойдутся дороже изначальной разницы в цене.</p>
-        </div>
-        <div class="card">
-          <h3>Документированная гарантия</h3>
-          <p class="muted">Мы фиксируем условия эксплуатации и даём письменную гарантию 5 лет. При браке или повреждении в пути мы изготовим и доставим новое за свой счёт.</p>
-        </div>
-        <div class="card">
-          <h3>Проверка качества перед оплатой</h3>
-          <p class="muted">Можно увидеть образцы, получить фото/видео отчёт и акт контроля. Оплата — после утверждения качества, без сюрпризов.</p>
+        <div class="hero__visual">
+          <div class="hero__card">
+            <div class="pill">Новинка · Linea</div>
+            <div class="mirror-shape"></div>
+            <div class="hero__meta">
+              <div>
+                <p class="label">Тонкая рамка</p>
+                <p class="value">8 мм анодированный алюминий</p>
+              </div>
+              <div>
+                <p class="label">Подсветка</p>
+                <p class="value">регулировка 2700K — 4000K</p>
+              </div>
+              <div>
+                <p class="label">Опции</p>
+                <p class="value">обогрев, сенсор, акустика</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
-    <section style="margin-top: 36px;">
-      <span class="pill">Как мы работаем</span>
-      <div class="grid">
-        <div class="card">
-          <h3>1. Консультация</h3>
-          <p class="muted">Собираем размеры, условия помещения и ваши пожелания. Предлагаем 2–3 конфигурации под бюджет.</p>
+    <section class="section" id="collection">
+      <div class="container">
+        <div class="section__head">
+          <div>
+            <p class="eyebrow">Коллекция 2024</p>
+            <h2>Формы, которые подчёркивают свет</h2>
+            <p class="lede">Выберите готовую модель или измените размер, цвет рамки и тип подсветки под ваш интерьер.</p>
+          </div>
+          <a class="button ghost" href="#contact">Запросить каталог</a>
         </div>
-        <div class="card">
-          <h3>2. Проект и смета</h3>
-          <p class="muted">Фиксируем спецификацию материалов, сроки и гарантию. Прозрачная смета без скрытых доплат.</p>
-        </div>
-        <div class="card">
-          <h3>3. Производство и контроль</h3>
-          <p class="muted">Каждое зеркало проходит проверку геометрии, покрытия и упаковки. Отчёт отправляем вам.</p>
-        </div>
-        <div class="card">
-          <h3>4. Доставка и монтаж</h3>
-          <p class="muted">Аккуратно доставляем, монтируем и закрепляем. Проверяем внешний вид при вас.</p>
+        <div class="cards">
+          <article class="card">
+            <div class="card__image oval"></div>
+            <div class="card__body">
+              <div>
+                <p class="eyebrow">Aurora</p>
+                <h3>Органическая форма</h3>
+                <p>Смягчает строгую геометрию помещения. Контурная подсветка и скрытое крепление для парящей посадки.</p>
+              </div>
+              <div class="chip-row">
+                <span class="chip">от 45 000 ₽</span>
+                <span class="chip">подсветка 360°</span>
+                <span class="chip">IP44</span>
+              </div>
+            </div>
+          </article>
+          <article class="card">
+            <div class="card__image arch"></div>
+            <div class="card__body">
+              <div>
+                <p class="eyebrow">Linea</p>
+                <h3>Арочное зеркало</h3>
+                <p>Идеально для прихожих и салонов. Регулируемая тёплая/нейтральная подсветка, антивандальная плёнка.</p>
+              </div>
+              <div class="chip-row">
+                <span class="chip">от 38 000 ₽</span>
+                <span class="chip">обогрев</span>
+                <span class="chip">сенсор</span>
+              </div>
+            </div>
+          </article>
+          <article class="card">
+            <div class="card__image round"></div>
+            <div class="card__body">
+              <div>
+                <p class="eyebrow">Halo</p>
+                <h3>Круг с подсветкой</h3>
+                <p>Бестселлер для ванных комнат. Тонкая рамка 6 мм, мягкий рассеянный свет и защита от запотевания.</p>
+              </div>
+              <div class="chip-row">
+                <span class="chip">от 34 000 ₽</span>
+                <span class="chip">антизапотевание</span>
+                <span class="chip">дымчатое стекло</span>
+              </div>
+            </div>
+          </article>
         </div>
       </div>
-      <div class="cta">
-        <a class="button" href="mailto:sales@portal.ru">Получить предложение</a>
-        <span class="note">Сравним с маркетплейсом по честным параметрам — покажем, где именно экономия, а где риск.</span>
+    </section>
+
+    <section class="section muted" id="benefits">
+      <div class="container grid two-col">
+        <div class="stack">
+          <p class="eyebrow">Почему выбирают нас</p>
+          <h2>Премиальные материалы и контроль качества</h2>
+          <p class="lede">Работаем с зеркальным полотном класса A, используем европейскую фурнитуру и собираем каждый заказ вручную.</p>
+          <ul class="feature-list">
+            <li>
+              <span class="icon">◆</span>
+              <div>
+                <h3>Алюминиевые профили</h3>
+                <p>Лёгкие, не подвержены коррозии и доступны в 6 оттенках: шампань, графит, латунь, матовый чёрный и др.</p>
+              </div>
+            </li>
+            <li>
+              <span class="icon">◆</span>
+              <div>
+                <h3>Точная подгонка</h3>
+                <p>Цифровая выкройка по вашим размерам, лазерная шлифовка кромок и полировка стекла до зеркального блеска.</p>
+              </div>
+            </li>
+            <li>
+              <span class="icon">◆</span>
+              <div>
+                <h3>Безопасность</h3>
+                <p>Антивандальная плёнка удерживает осколки при ударе. Электрика соответствует IP44 для влажных зон.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="glass-panel">
+          <p class="eyebrow">Умные функции</p>
+          <ul class="chip-column">
+            <li><span class="chip">LED 2700–4000K</span><p>Регулировка тёплого и нейтрального света с памятью режима.</p></li>
+            <li><span class="chip">Сенсорное управление</span><p>Бесконтактное включение, диммирование и таймер автоотключения.</p></li>
+            <li><span class="chip">Bluetooth-акустика</span><p>Стереосистема для ванной, скрытая за полотном.</p></li>
+            <li><span class="chip">Подогрев</span><p>Тонкий нагревательный модуль против запотевания.</p></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="objections">
+      <div class="container">
+        <div class="section__head">
+          <div>
+            <p class="eyebrow">Возражения «Дорого» и «На маркетплейсе дешевле»</p>
+            <h2>Ценим качество, а не гонку за минимальной ценой</h2>
+            <p class="lede">ООО «Портал» — средний-премиум сегмент: мы выбираем полотно класса A, алюминий и электронику с ресурсом 50 000 часов. В стоимость входит сервис, которого нет у массовых предложений.</p>
+          </div>
+          <a class="button ghost" href="#contact">Получить точный расчёт</a>
+        </div>
+        <div class="trust-grid">
+          <article class="trust-card">
+            <p class="eyebrow">Почему дороже</p>
+            <h3>Ручная сборка и проверка</h3>
+            <p>Каждое зеркало собирает мастер, сверяя геометрию, шлифовку и равномерность подсветки. Массовые фабрики и маркетплейсы экономят на контроле.</p>
+          </article>
+          <article class="trust-card">
+            <p class="eyebrow">Что включает цена</p>
+            <ul>
+              <li>бесплатный замер и 3D-визуализация</li>
+              <li>монтаж сертифицированной бригадой</li>
+              <li>гарантия 3 года + сервис 48 часов</li>
+              <li>премиальная упаковка для перевозки</li>
+            </ul>
+          </article>
+          <article class="trust-card">
+            <p class="eyebrow">Чем отличаемся от маркетплейса</p>
+            <h3>Качество, подтверждённое документами</h3>
+            <p>Декларации на электронику IP44, антивандальная плёнка, ровный свет без «пятен». Чеки, договор, гарантийный талон и поддержка после установки.</p>
+          </article>
+          <article class="trust-card highlight">
+            <div class="pill">Выбор для требовательных интерьеров</div>
+            <div class="metrics">
+              <div>
+                <p class="label">94% клиентов</p>
+                <p class="value">выбирают нас после сравнения с маркетплейсом</p>
+              </div>
+              <div>
+                <p class="label">3 проверки</p>
+                <p class="value">замер → производство → предмонтаж</p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="designer">
+      <div class="container grid two-col">
+        <div class="showcase">
+          <div class="showcase__frame">
+            <div class="showcase__mirror"></div>
+            <div class="showcase__accent"></div>
+          </div>
+          <div class="showcase__tags">
+            <span class="chip">матовый графит</span>
+            <span class="chip">парящий монтаж</span>
+            <span class="chip">подсветка 4000K</span>
+          </div>
+        </div>
+        <div class="stack">
+          <p class="eyebrow">Дизайнерское бюро</p>
+          <h2>Поддержка архитектора на каждом этапе</h2>
+          <p class="lede">Помогаем подобрать форму и геометрию под ваши планы помещения. Визуализируем вариант в 3D и согласуем инженерные точки подключения.</p>
+          <div class="pill-grid">
+            <div class="pill-card">
+              <p class="label">Визуализация</p>
+              <p class="value">рендер в течение 48 часов</p>
+            </div>
+            <div class="pill-card">
+              <p class="label">Монтаж</p>
+              <p class="value">сертифицированные мастера</p>
+            </div>
+            <div class="pill-card">
+              <p class="label">Срок</p>
+              <p class="value">производство от 7 дней</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section muted" id="process">
+      <div class="container">
+        <div class="section__head">
+          <div>
+            <p class="eyebrow">Как заказать</p>
+            <h2>4 шага от заявки до установки</h2>
+            <p class="lede">Работаем по Москве и области. Отправляем готовые изделия по России с проверенной упаковкой.</p>
+          </div>
+          <a class="button" href="#contact">Оставить заявку</a>
+        </div>
+        <div class="steps">
+          <div class="step">
+            <span class="step__index">01</span>
+            <div>
+              <h3>Заявка и замер</h3>
+              <p>Заполните форму или позвоните. Приедем на замер, привезём образцы рамок и подсветки.</p>
+            </div>
+          </div>
+          <div class="step">
+            <span class="step__index">02</span>
+            <div>
+              <h3>Дизайн и смета</h3>
+              <p>Подготовим визуализацию, предложим 2–3 варианта решения и согласуем бюджет.</p>
+            </div>
+          </div>
+          <div class="step">
+            <span class="step__index">03</span>
+            <div>
+              <h3>Производство</h3>
+              <p>Запускаем изготовление, тестируем подсветку и электронику, упаковываем в транспортировочный кейс.</p>
+            </div>
+          </div>
+          <div class="step">
+            <span class="step__index">04</span>
+            <div>
+              <h3>Доставка и монтаж</h3>
+              <p>Привозим в удобный день, устанавливаем и настраиваем управление светом.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <div class="container grid two-col">
+        <div class="stack">
+          <p class="eyebrow">Получить консультацию</p>
+          <h2>Расскажите о проекте — предложим решение за 15 минут</h2>
+          <p class="lede">Оставьте контакты, и специалист предложит конфигурацию зеркала и рассчитает стоимость с учётом доставки и монтажа.</p>
+          <ul class="feature-list compact">
+            <li><span class="icon">◆</span>Замер и 3D-визуализация — бесплатно</li>
+            <li><span class="icon">◆</span>Доставка по Москве и России</li>
+            <li><span class="icon">◆</span>Возможна рассрочка</li>
+          </ul>
+        </div>
+        <form class="form">
+          <label>
+            Имя
+            <input type="text" name="name" placeholder="Как к вам обратиться" required>
+          </label>
+          <label>
+            Телефон
+            <input type="tel" name="phone" placeholder="+7 (___) ___-__-__" required>
+          </label>
+          <label>
+            Тип зеркала
+            <select name="type">
+              <option>Настенное с подсветкой</option>
+              <option>Напольное дизайнерское</option>
+              <option>Для ванной комнаты</option>
+              <option>По индивидуальному эскизу</option>
+            </select>
+          </label>
+          <label>
+            Комментарий
+            <textarea name="comment" rows="4" placeholder="Размеры, цвет рамки, особенности помещения"></textarea>
+          </label>
+          <button type="submit" class="button">Отправить заявку</button>
+          <p class="form__note">Нажимая на кнопку, вы соглашаетесь с обработкой персональных данных.</p>
+        </form>
       </div>
     </section>
   </main>
 
-  <footer>
-    ООО «Портал» • Зеркала среднего-премиум сегмента • Тел.: +7 999 000 00 00 • sales@portal.ru
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div>
+        <div class="logo">ООО «Портал»</div>
+        <p>Премиальные зеркала для интерьеров. Производство, доставка и монтаж по России с гарантийной поддержкой.</p>
+      </div>
+      <div class="footer__links">
+        <div>
+          <p class="label">Контакты</p>
+          <a href="tel:+74951234567">+7 (495) 123-45-67</a>
+          <a href="mailto:hello@portal-msk.ru">hello@portal-msk.ru</a>
+        </div>
+        <div>
+          <p class="label">Адрес</p>
+          <p>Москва, Дизайн-квартал, ул. Арт-плей, 12</p>
+          <p>Пн–Сб 10:00–20:00</p>
+        </div>
+      </div>
+      <div class="footer__cta">
+        <p class="label">Остались вопросы?</p>
+        <a class="button ghost" href="#contact">Заказать звонок</a>
+      </div>
+    </div>
   </footer>
+
+  <script>
+    const navLinks = document.querySelectorAll('a[href^="#"]');
+    navLinks.forEach((link) => {
+      link.addEventListener('click', (event) => {
+        const targetId = link.getAttribute('href');
+        if (targetId.length > 1) {
+          event.preventDefault();
+          const section = document.querySelector(targetId);
+          section?.scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+    });
+  </script>
 </body>
 </html>
